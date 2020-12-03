@@ -1,0 +1,204 @@
+/*Full css design creation and animation
+Only absolute position has been used
+It's a little bit hypnotizing!!!
+*/
+
+
+// variables default color
+
+$primary : #000000!default;
+$secondary: #FFFF00!default;
+
+$colorsMap: (
+  'primary': $primary,
+  'secondary': $secondary,
+);
+
+
+//bg-color
+@mixin colorUtilities($property) {
+  @each $name, $value in $colorsMap {
+    &-#{$name} {
+      #{$property}: $value;
+    }
+  }
+}
+
+.bg {
+  @include colorUtilities(background-color);
+}
+
+html { 
+  font-size: 5px;
+}
+
+.container-one {
+  width: 14rem;
+  height: 14rem;
+  animation: 6s linear 0s infinite running slidein;
+}
+
+.container-two {
+  margin-top: 4rem;
+  animation: 8s linear 0.5s infinite running slidein;
+}
+
+.container-three {
+  margin-top: 22rem;
+  animation: 4.5s linear 0s infinite running slidein;
+}
+
+.container-four {
+  margin-top: 40rem;
+  animation: 8.5s linear 0s infinite running slidein;
+}
+
+.container-five {
+  margin-top: 58rem;
+  animation: 5s linear 0s infinite running slidein;
+}
+
+.container-six {
+  margin-top: 76rem;
+  animation: 2.5s linear 0s infinite running slidein;
+}
+
+.case {
+  display: inline-block;
+  position: absolute;
+  width: 1rem;
+  height: 1rem; 
+}
+
+.case-relative {
+  display: inline-block;
+  position: absolute;
+  width: 1rem;
+  height: 1rem; 
+}
+
+//columns
+.col-one {
+  margin-left: 0rem;  
+}
+
+.col-two {
+  margin-left: 1rem;  
+}
+
+.col-three {
+  margin-left: 2rem;
+}
+
+.col-four {
+  margin-left: 3rem;
+}
+
+.col-five {
+  margin-left: 4rem;
+}
+
+.col-six {
+  margin-left: 5rem;
+}
+
+.col-seven {
+  margin-left: 6rem;
+}
+
+.col-eight {
+  margin-left: 7rem;
+}
+
+.col-nine {
+  margin-left: 8rem;
+}
+
+.col-ten {
+  margin-left: 9rem;
+}
+
+.col-eleven {
+  margin-left: 10rem;
+}
+
+.col-twelve {
+  margin-left: 11rem;
+}
+
+.col-thirteen {
+  margin-left: 12rem;
+}
+
+.col-fourteen {
+  margin-left: 13rem;
+}
+
+.col-fifteen {
+  margin-left: 14rem;
+}
+
+// rows
+.row-two {
+  margin-top: 1rem;
+}
+
+.row-three {
+  margin-top: 2rem;
+}
+
+.row-four {
+  margin-top: 3rem;
+}
+
+.row-five {
+  margin-top: 4rem;
+}
+
+.row-six {
+  margin-top: 5rem;
+}
+
+.row-seven {
+  margin-top: 6rem;
+}
+
+.row-eight {
+  margin-top: 7rem;
+}
+
+.row-nine {
+  margin-top: 8rem;
+}
+
+.row-ten {
+  margin-top: 9rem;
+}
+
+.row-eleven {
+  margin-top: 10rem;
+}
+
+.row-twelve {
+  margin-top: 11rem;
+}
+
+.row-thirteen {
+  margin-top: 12rem;
+}
+
+.row-fourteen {
+  margin-top: 13rem;
+}
+
+.row-fifteen {
+  margin-top: 14rem;
+}
+
+// Slide-in Animation
+@keyframes slidein {
+  from { margin-left: -20%; } to { margin-left: 100%; } 
+}
+
+
+
